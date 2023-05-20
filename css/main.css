@@ -459,7 +459,6 @@ header .container .navbar ul li a:hover {
 }
 .test-cont .info .person{
   display: flex;
-  align-self: flex-end;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -497,6 +496,7 @@ header .container .navbar ul li a:hover {
   }
   .test-cont .info .person{
     margin-bottom: 50px;
+    padding: 0;
   }
 }
 @media (max-width: 767px){
@@ -506,4 +506,130 @@ header .container .navbar ul li a:hover {
 
   }
 }
+.test .controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.test .controls .spans{
+  display: flex;
+  align-items: center;
+}
+.test .controls .spans span{
+  background-color: #458ff68e;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+.test .controls .spans span:not(:last-child){
+  margin-right: 10px;
+}
+.test .controls .spans span.active{
+  background-color: var(--main-color);
+}
+.test .controls .fa-arrow-left{
+  color: var(--main-color);
+  margin-right: 20px;
+}
+.test .controls .fa-arrow-right{
+  color: var(--main-color);
+  margin-left: 20px;
+}
 /* End test */
+/* Start article */
+.article{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.article .container{
+  overflow: hidden;
+}
+.article .container .special-heading{
+  margin-bottom: 100px;
+}
+.article .cards-cont{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+.article .cards-cont .card{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.article .cards-cont .card .image img{
+  max-width: 100%;
+}
+.article .cards-cont .card .info{
+  padding: 30px;
+}
+.article .cards-cont .card .info h3{
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+.article .cards-cont .card .info p{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #777;
+  margin-bottom: 25px;
+}
+.article .cards-cont .card .info small{
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+}
+.article .cards-cont .card .info small i{
+  margin-left: 10px;
+}
+.article button{
+  display: block;
+  margin: 50px auto;
+}
+/* End article */
+/* Start footer */
+.footer{
+  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  padding: 120px;
+  overflow: hidden;
+}
+.footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  color: white;
+  grid-gap: 60px;
+}
+.footer .container .contact{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer .container .contact .logo{
+  display: flex;
+  align-items: center;
+}
+.footer .container .contact .logo span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  width: 41px;
+  height: 41px;
+  color: var(--main-color);
+  border-radius: 50%;
+}
+.footer .container .list h3{
+  margin-bottom: 45px;
+}
+.footer .container .list ul li{
+  margin-bottom: 24px;
+}
+.footer .container .list ul li a{
+  color: #fff;
+}
+/* End footer */
