@@ -193,7 +193,9 @@ header .fa-bars{
   font-size: 24px;
   display: none;
   width: 500px;
+  cursor: pointer;
 }
+
 @media (max-width: 767px){
   header .container .navbar ul{
     display: none;
@@ -201,12 +203,13 @@ header .fa-bars{
     position: absolute;
     background-color: white;
     bottom: -499%;
-    right: -61px;
+    right: 2px;
     padding: 10px;
     width: 183px;
-    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     transition: 0.3s;
   }
+
   header .container .navbar ul li:not(:last-child){
     border-bottom: 1px solid #777;
   }
@@ -217,11 +220,16 @@ header .fa-bars{
     display: block;
     width: fit-content;
   }
-  header .fa-bars:hover + ul{
+  /* header .fa-bars:hover + ul{
     display: block;
-    bottom: -444%;
-    opacity: 1;
-  }
+  } */
+}
+ul.active-ul{
+  bottom: -456%;
+  opacity: 1;
+  display: block;
+  transform: translateY(450px);
+  transition: 0.3s;
 }
 header .container .navbar ul li a.active,
 header .container .navbar ul li a:hover {
@@ -409,3 +417,93 @@ header .container .navbar ul li a:hover {
 }
 
 /* End healthcare */
+/* Start test */
+.test{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.test .container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.test-cont{
+  width: 100%;
+  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+  border-radius: 24px;
+  padding: 70px;
+}
+.test-cont  h2{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 70px;
+  position: relative;
+}
+.test-cont  h2::after{
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  height: 2px;
+  width: 56px;
+}
+.test-cont .info{
+  color: #fff;
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.test-cont .info .person{
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 70px;
+}
+.test-cont .info .person .image{
+  border-radius: 50%;
+  align-self: center;
+  border: 3px solid #fff;
+  overflow: hidden;
+  width: 191px;
+  height: 191px;
+}
+.test-cont .info .person .name h3{
+  font-weight: 700;
+}
+.test-cont .info .person .name p{
+  font-weight: 200;
+}
+.test-cont .info .person .image img{
+  max-width: 100%;
+}
+.test-cont .info .paragraph{
+  flex: 3;
+}
+@media(max-width: 991px){
+  .test-cont .info{
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .test-cont .paragraph{
+    text-align: center;
+  }
+  .test-cont .info .person{
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px){
+  .test-cont .info .person{
+    flex-direction: column;
+    text-align: center;
+
+  }
+}
+/* End test */
